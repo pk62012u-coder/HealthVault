@@ -141,3 +141,21 @@ GitHub: Add your GitHub profile URL here.
 
 ![HealthVault Patient Dashboard](docs/screenshots/dashboard.png)
 
+## System Architecture
+
+HealthVault uses a React frontend, Express backend, and MongoDB database.
+
+```mermaid
+flowchart TD
+    U["Patient / Clinician"] --> FE["React + Vite Frontend"]
+    FE --> API["Node.js + Express REST API"]
+    API --> AUTH["JWT Authentication"]
+    AUTH --> RBAC["Role-Based Access Control"]
+    RBAC --> MR["Medical Records API"]
+    RBAC --> AP["Appointments API"]
+    RBAC --> MED["Medication API"]
+    MR --> DB[("MongoDB")]
+    AP --> DB
+    MED --> DB
+    MR --> UP["Multer File Upload"]
+    UP --> FS[("Private File Storage")]
