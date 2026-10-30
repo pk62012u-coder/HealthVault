@@ -135,3 +135,9 @@ HealthVault is an educational software project and is not a certified medical re
 **Prashant Kumar**
 
 GitHub: Add your GitHub profile URL here.
+## Application Screenshots
+
+### Patient Dashboard
+
+![HealthVault Patient Dashboard](docs/screenshots/dashboard.png)
+
